@@ -56,11 +56,9 @@ def p2():
                 print("one board left")
                 unmarked = [e for e in itertools.chain(
                     *boards[0]) if e not in called]
-                pprint.pprint(boards)
 
                 print(f"{unmarked} * {e}={sum(unmarked) * int(e)}")
                 sys.exit(0)
-            print("got winner", winner)
             boards.pop(winner)
             winner = getWinner()
 
